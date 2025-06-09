@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: #000;
+  border-radius: 25px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* layar/display */
+.display {
+  color: #fff;
+  text-align: right;
+  font-size: 3rem;
+  padding: 20px 10px;
+  background: #000;
+}
+
+/* button */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 35px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-dark {
+  background: #505050;
+  box-shadow: 0 2px 6px #575760;
+}
+
+.btn-light {
+  background: #d4d4d2;
+  color: black;
+  box-shadow: 0 2px 6px #7F8590;
+}
+
+.btn-orange {
+  background: #ff9500;
+  color: white;
+  box-shadow: -1px 2px 6px #C76B21;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 35px;
+  text-align: left;
+}
+
+.btn:hover {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ganti  tema */
+body.light {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background: #ffffff;
+  color: #ffffff;
+}
+
+body.light .calculator {
+  background: #ffffff;
+}
+
+body.dark .calculator {
+  background: #000000;
+}
+
+body.light .display {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark .display {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* icon */
+.toggle-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
